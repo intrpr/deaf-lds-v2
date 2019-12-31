@@ -16,7 +16,7 @@
 		h1, h2, h3, h4, h5, h6, p { text-align: left;}
 		h1 { font-size: 185%; line-height: .9; }
 			.cd-header h1 { color: #ffffff; line-hqqeight: 150px; text-align: center; font-size: 200%; font-weight: 300; }
-		h2 { font-size: 105%; line-height: 1.2; font-weight: 700; }
+		h2 { font-size: 130%; line-height: 1.2; margin: 0 0 .5vh 0; font-weight: 700; }
 		h3 { font-size: 100%; line-height: 1.2; margin: 0 0 1vh 0; color: rgba(0,0,0,.5); font-weight: 500; }
 		h4 { font-size: 115%; line-height: 1.4; }
 		h5 { font-size: 85%; line-height: 1.4; margin: 1vh 0 0 0; color: rgba(0,0,0,.5); }
@@ -27,8 +27,9 @@
 		.intro { background: rgb(51,29,53,1); color: rgba(255,255,255,1); padding: 3vh; borqqder: 1px solid #f00; }
 			.intro h5 { color: rgba(255,255,255,1); }
 		.unit { background: rgba(255,255,255,1); padding: 3vh; borqqder: 1px solid #f00; }
+			.discontinued { opacity: .2; }
 		.unit a { text-decoration: underline; }
-		.unit img { margin: 0 0 2vh 0; }
+		.unit img { height: 15vh; margin: 0 0 2vh 0; }
 		.ward { border-top: 1vh solid #f0f; }
 		.branch { border-top: 1vh solid #00f; }
 		.cd-gallery li { box-shadow: 0 .1vh .5vh rgba(0,0,0,.2);}
@@ -75,7 +76,7 @@
 				<!-- SLV 1st Ward, Utah -->
 				<li class="unit mix ward utah option03">
 					<div>
-						<img src="https://maps.googleapis.com/maps/api/streetview?channel=mapsClient-prod-1.0&pano=I0noW9dwF9jsH3majyK5KA&size=200x100&heading=174.2599743481692&pitch=10.0&fov=120.0&client=gme-lds&signature=YNIQIKEoUkp8ryhc0sTDjV_l8zI=" alt="">
+						<img style="background-image: url(https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-4948.jpg); background-size: cover; background-position: 50% 50%;" alt="">
 						<h2>SL Valley 1st Ward (Sign Language)</h2>
 						<h3>Salt Lake Central Stake</h3>
 						<p><a href="https://www.lds.org/maps/meetinghouses/@40.753745,-111.872379,16&f=ase,,,&id=ward.deaf:2585">768 East 700 South, Salt Lake City, UT 84102</a></p>
@@ -89,7 +90,7 @@
 				<!-- SLV 2nd Ward, Utah -->
 				<li class="mix unit ward utah option02">
 					<div>
-						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-111.9487507%2C40.637559&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=ctVADXz8w3qY5qcciDCYFEBZXOw%3D" alt="">
+						<img style="background-image: url(https://churchofjesuschristtemples.org/assets/img/temples/jordan-river-utah-temple/jordan-river-utah-temple-7270-main.jpg); background-size: cover; background-position: 50% 50%;" alt="">
 						<h2>SL Valley 2nd Ward (Sign Language)</h2>
 						<h3>Bennion Utah Stake</h3>
 						<p><a href="https://www.lds.org/maps/meetinghouses/@40.637559,-111.950521,17&f=ase,,,&id=ward.deaf:266426">6250 South 2200 West, West Jordan, UT 84084</a></p>
@@ -103,7 +104,7 @@
 				<!-- UV Ward, Utah -->
 				<li class="mix unit ward utah option01">
 					<div>
-						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-111.66266100000001%2C40.222335&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<img style="background-image: url(https://churchofjesuschristtemples.org/assets/img/temples/_temp/015%20-%20Provo%20Utah%20Temple.jpg); background-size: cover; background-position: 50% 50%;" alt="">
 						<h2>Utah Valley Ward (Sign Language)</h2>
 						<h3>Provo Utah South Stake</h3>
 						<p><a href="https://www.lds.org/maps/meetinghouses/@40.222335,-111.662882,20&f=ase,,,&id=ward.deaf:157686">888 South Freedom Blvd, Provo, UT 84601</a></p>
@@ -157,7 +158,7 @@
 				</li>
 
 				<!-- Gooding Branch, Idaho -->
-				<li class="mix unit branch idaho option04">
+				<li class="mix unit branch idaho discontinued option04">
 					<div>
 						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-114.71248809999997%2C42.9328399&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
 						<h2>Gooding Branch (Sign Language)</h2>
@@ -227,6 +228,20 @@
 					</div>
 				</li>
 
+				<!-- Phoenix Branch (Sign Language), Arizona -->
+				<li class="mix unit branch na-southwest option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-112.13456930000001%2C33.5924357&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Rio Grande Valley Branch (Sign Language)</h2>
+						<h3>McAllen Texas West Stake</h3>
+						<p><a href="https://www.churchofjesuschrist.org/maps/meetinghouses/@26.256106,-98.246583,18&id=ward.deaf:2132109">5601 North 29th Street, McAllen, TX 00000</a></p>
+						<p>10:20 am–1:20 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Phoenix Temple; Third Saturday, 11:00 am</p>
+						<h5>Membership: 40; 4 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+				
 				<!--
 				<li class="gap"></li>
 				<li class="gap"></li>

@@ -4,82 +4,401 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
 	<title>Content Filters | CodyHouse</title>
 	<style>
-		body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; background: rgba(0,0,0,.1);}
+		body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+		.cd-filter .cd-close { width: auto; padding: 0 2vh; background: rgba(0,0,0,.2); }
+		.hide { display: none; visibility: hidden;}
+		h1, h2, h3, h4, h5, h6, p { text-align: left;}
+		h1 { font-size: 185%; line-height: .9; }
+			.cd-header h1 { color: #ffffff; line-hqqeight: 150px; text-align: center; font-size: 200%; font-weight: 300; }
+		h2 { font-size: 130%; line-height: 1.2; margin: 0 0 .5vh 0; font-weight: 700; }
+		h3 { font-size: 100%; line-height: 1.2; margin: 0 0 1vh 0; color: rgba(0,0,0,.5); font-weight: 500; }
+		h4 { font-size: 115%; line-height: 1.4; }
+		h5 { font-size: 85%; line-height: 1.4; margin: 1vh 0 0 0; color: rgba(0,0,0,.5); }
+		h6 { font-size: 80%; line-height: 1.4; color: rgba(0,0,0,.5); }
+		p { font-size: 88%; line-height: 1.45; }
+		li { vertical-align: top; }
+		small { font-size: 80%; color: rgba(0,0,0,.5); font-weight: 500;}
+		.intro { background: rgb(51,29,53,1); color: rgba(255,255,255,1); padding: 3vh; borqqder: 1px solid #f00; }
+			.intro h5 { color: rgba(255,255,255,1); }
+		.unit { background: rgba(255,255,255,1); padding: 3vh; borqqder: 1px solid #f00; }
+			.discontinued { opacity: .2; }
+		.unit a { text-decoration: underline; }
+		.unit img { height: 15vh; margin: 0 0 2vh 0; }
+		.ward { border-top: 1vh solid #f0f; }
+		.branch { border-top: 1vh solid #00f; }
+		.cd-gallery li { box-shadow: 0 .1vh .5vh rgba(0,0,0,.2);}
 
-		h1, h2, h3, h4, h5, h6, p, li { line-height: 1.6; margin: 0; }
-		
-		.card { padding: 2.5em; background: rgba(255,255,255,1); vertical-align: top; text-align: left; box-shadow: 0 20px 20px rgba(0,0,0,.08);}
-		
-		@media only screen and (max-width: 599px) {
-		article {
-			column-count: 1;
-			background: #f00;
-			column-gap: 3em;
-			}
+		@media only screen and (min-width: 1170px) {
+		  .cd-gallery li { width: 19%; }
+		  .cd-filter { width: 21%; }
 		}
-		@media only screen and (min-width: 600px) and (max-width: 768px) {
-		article {
-			column-count: 2;
-			background: #ff0; 
-			column-gap: 3em;
-			}
-		}
-
-		@media only screen and (min-width: 769px) {
-		article {
-			column-count: 3;
-			background: #0f0;
-			column-gap: 3em;
-			}
-		}
-
 
 	</style>
 </head>
 <body>
-	<header>
+	<header class="cd-header">
+		<h1>Content Filters</h1>
 	</header>
 
-	<article>
-		<!-- SLV 1st Ward, Utah -->
-		<div class="card">
-			<img src="https://maps.googleapis.com/maps/api/streetview?channel=mapsClient-prod-1.0&pano=I0noW9dwF9jsH3majyK5KA&size=200x100&heading=174.2599743481692&pitch=10.0&fov=120.0&client=gme-lds&signature=YNIQIKEoUkp8ryhc0sTDjV_l8zI=" alt="">
-			<h2>SL Valley 1st Ward (Sign Language)</h2>
-			<h3>Salt Lake Central Stake</h3>
-			<p><a href="https://www.lds.org/maps/meetinghouses/@40.753745,-111.872379,16&f=ase,,,&id=ward.deaf:2585">768 East 700 South, Salt Lake City, UT 84102</a></p>
-			<p>9:00–12:00 pm (Sac, SS, PH/RS/Pri)</p>
-			<p>Bountiful Temple; First Tuesdays, 6:00 pm</p>
-			<h5>Membership: 220; 2 missionaries</h5>
-			<h6>Updated 28 Aug 2017</h6>
-		</div>
-		
-		<!-- SLV 2nd Ward, Utah -->
-		<div class="card">
-			<img src="https://maps.googleapis.com/maps/api/streetview?channel=mapsClient-prod-1.0&pano=I0noW9dwF9jsH3majyK5KA&size=200x100&heading=174.2599743481692&pitch=10.0&fov=120.0&client=gme-lds&signature=YNIQIKEoUkp8ryhc0sTDjV_l8zI=" alt="">
-			<h2>SL Valley 2nd Ward (Sign Language)</h2>
-			<h3>Bennion Utah Stake</h3>
-			<p><a href="https://www.lds.org/maps/meetinghouses/@40.637559,-111.950521,17&f=ase,,,&id=ward.deaf:266426">6250 South 2200 West, West Jordan, UT 84084</a></p>
-			<p>11:00–2:00 pm (Sac, SS, PH/RS/Pri)</p>
-			<p>Jordan River Temple; First Tuesdays, 6:00 pm</p>
-			<h5>Membership: 310; 2 missionaries</h5>
-			<h6>Updated 28 Aug 2017</h6>
-		</div>
-		
-		<!-- UV Ward, Utah -->
-		<div class="card">
-			<img src="https://maps.googleapis.com/maps/api/streetview?channel=mapsClient-prod-1.0&pano=I0noW9dwF9jsH3majyK5KA&size=200x100&heading=174.2599743481692&pitch=10.0&fov=120.0&client=gme-lds&signature=YNIQIKEoUkp8ryhc0sTDjV_l8zI=" alt="">
-			<h2>Utah Valley Ward (Sign Language)</h2>
-			<h3>Provo Utah South Stake</h3>
-			<p><a href="https://www.lds.org/maps/meetinghouses/@40.222335,-111.662882,20&f=ase,,,&id=ward.deaf:157686">888 South Freedom Blvd, Provo, UT 84601</a></p>
-			<p>1:00–4:00 pm (Sac, SS, PH/RS/Pri)</p>
-			<p>Provo Temple; First Tuesdays, 6:00 pm</p>
-			<h5>Membership: 220; no missionaries</h5>
-			<h6>Updated 28 Aug 2017</h6>
-		</div>
-	</article>
+	<main class="cd-main-content">
+		<div class="cd-tab-filter-wrapper">
+			<div class="cd-tab-filter">
+				<ul class="cd-filters">
+					<li class="placeholder">
+						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
+					</li>
+					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
+					<li class="filter" data-filter=".ward"><a href="#0" data-type="ward">Wards</a></li>
+					<li class="filter" data-filter=".branch"><a href="#0" data-type="branch">Branches</a></li>
+					<li class="filter" data-filter=".group"><a href="#0" data-type="group">Groups</a></li>
+					<li class="filter" data-filter=".mission"><a href="#0" data-type="other">Missions</a></li>
+				</ul> <!-- cd-filters -->
+			</div> <!-- cd-tab-filter -->
+		</div> <!-- cd-tab-filter-wrapper -->
 
+		<section class="cd-gallery">
+			<ul>
+				<!-- Introduction -->
+				<li class="intro mix other utah option03">
+					<div>
+						<h2>Introduction</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h5>Updated 20 Aug 2018</h5>
+					</div>
+				</li>
+
+				<!-- SLV 1st Ward, Utah -->
+				<li class="unit mix ward utah option03">
+					<div>
+						<img style="background-image: url(https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-4948.jpg); background-size: cover; background-position: 50% 50%;" alt="">
+						<h2>SL Valley 1st Ward (Sign Language)</h2>
+						<h3>Salt Lake Central Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@40.753745,-111.872379,16&f=ase,,,&id=ward.deaf:2585">768 East 700 South, Salt Lake City, UT 84102</a></p>
+						<p>9:00–12:00 pm (Sac, SS, PH/RS/Pri)</p>
+						<p>Bountiful Temple; First Tuesdays, 6:00 pm</p>
+						<h5>Membership: 220; 2 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- SLV 2nd Ward, Utah -->
+				<li class="mix unit ward utah option02">
+					<div>
+						<img style="background-image: url(https://churchofjesuschristtemples.org/assets/img/temples/jordan-river-utah-temple/jordan-river-utah-temple-7270-main.jpg); background-size: cover; background-position: 50% 50%;" alt="">
+						<h2>SL Valley 2nd Ward (Sign Language)</h2>
+						<h3>Bennion Utah Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@40.637559,-111.950521,17&f=ase,,,&id=ward.deaf:266426">6250 South 2200 West, West Jordan, UT 84084</a></p>
+						<p>11:00–2:00 pm (Sac, SS, PH/RS/Pri)</p>
+						<p>Jordan River Temple; First Tuesdays, 6:00 pm</p>
+						<h5>Membership: 310; 2 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- UV Ward, Utah -->
+				<li class="mix unit ward utah option01">
+					<div>
+						<img style="background-image: url(https://churchofjesuschristtemples.org/assets/img/temples/_temp/015%20-%20Provo%20Utah%20Temple.jpg); background-size: cover; background-position: 50% 50%;" alt="">
+						<h2>Utah Valley Ward (Sign Language)</h2>
+						<h3>Provo Utah South Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@40.222335,-111.662882,20&f=ase,,,&id=ward.deaf:157686">888 South Freedom Blvd, Provo, UT 84601</a></p>
+						<p>1:00–4:00 pm (Sac, SS, PH/RS/Pri)</p>
+						<p>Provo Temple; First Tuesdays, 6:00 pm</p>
+						<h5>Membership: 220; no missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- CV Branch, Utah -->
+				<li class="mix unit branch utah option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-111.8196125%2C41.754256&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Cache Valley Branch (Sign Language)</h2>
+						<h3>Logan Utah Central Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@41.754256,-111.819834,20&id=ward.deaf:335975">1255 North 600 East, Logan UT 84321</a></p>
+						<p>12:20–3:20 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Logan Temple; Third Thursday, 7:00 pm</p>
+						<h5>Membership: 65; no missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- Fallbrook Branch, Texas -->
+				<li class="mix unit branch na-southwest option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-95.5050273%2C29.9240587&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Fallbrook Branch (Sign Language)</h2>
+						<h3>Klein Texas Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@29.924059,-95.505249,20&id=ward.deaf:416002">7699 Fallbrook Dr, Houston, TX 77086</a></p>
+						<p>12:20–3:20 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Houston Temple; First Saturday, 4:00 pm</p>
+						<h5>Membership: 60; 4 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- Fremont Branch (Sign Language), California -->
+				<li class="mix unit branch na-west option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-121.96843999999999%2C37.5606347&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Fremont Branch (Sign Language)</h2>
+						<h3>Fremont California Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@37.560635,-121.969325,18&id=ward.deaf:166766">810 Walnut Ave, Fremont, CA 94538</a></p>
+						<p>10:40 am–1:40 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Oakland Temple; First Saturday, 3:00 pm</p>
+						<h5>Membership: 35; 2 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- Gooding Branch, Idaho -->
+				<li class="mix unit branch idaho discontinued option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-114.71248809999997%2C42.9328399&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Gooding Branch (Sign Language)</h2>
+						<h3>Wendell Idaho Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@42.932801,-114.712588,18&id=ward.deaf:181005">1228 S Main St, Gooding, ID 83330</a></p>
+						<p>9:00 am–12:00 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Twin Falls Temple; Third Saturday, 12:00 pm</p>
+						<h5>Membership: unk; no missionaries</h5>
+						<p>Branch discontinued 2018</p>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- Lehi 44th Branch (Sign Language), Utah -->
+				<li class="mix unit branch utah option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-111.88346200000001%2C40.39906&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Lehi 44th Branch (Sign Language)</h2>
+						<h3>Lehi Utah Willow Park Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@40.405751,-111.892729,15&id=meetinghouse:5000619-01-01">1998 West 900 North, Lehi, Utah 84043</a></p>
+						<p>1:00 pm–4:00 pm (Sac, SS, PH/RS/Pri)</p>
+						<p>Mt. Timpanogos Temple; Fourth Saturday, 4:30 pm</p>
+						<h5>Membership: 140; no missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- Mesa Branch (Sign Language), Arizona -->
+				<li class="mix unit branch na-southwest option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-111.8113811%2C33.3937129&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Mesa Branch (Sign Language)</h2>
+						<h3>Mesa Arizona Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@33.393749,-111.812173,17&id=ward.deaf:1988441">940 E Southern Ave, Mesa, AZ 85204</a></p>
+						<p>9:50 pm–12:50 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Mesa Temple; First Friday, 7:30 pm</p>
+						<h5>Membership: 85; 4 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- Ogden Valley Branch (Sign Language), Utah -->
+				<li class="mix unit branch utah option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-111.95766700000001%2C41.161076&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Ogden Valley Branch (Sign Language)</h2>
+						<h3>Ogden Utah Pleasant Valley Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@41.161076,-111.961208,16&id=ward.deaf:75299">5640 South 850 East, Ogden, UT 84403</a></p>
+						<p>11:00 am–2:00 pm (Sac, SS, PH/RS/Pri)</p>
+						<p>Ogden Temple; Fourth Saturday, 6:30 pm</p>
+						<h5>Membership: 150; no missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+				
+				<!-- Phoenix Branch (Sign Language), Arizona -->
+				<li class="mix unit branch na-southwest option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-112.13456930000001%2C33.5924357&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Phoenix Branch (Sign Language)</h2>
+						<h3>Phoenix Arizona East Stake</h3>
+						<p><a href="https://www.lds.org/maps/meetinghouses/@33.592626,-112.135575,17&id=ward.deaf:183016">1835 E Missouri, Phoenix, AZ 85016</a></p>
+						<p>10:20 am–1:20 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Phoenix Temple; Third Saturday, 11:00 am</p>
+						<h5>Membership: 100; 4 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+
+				<!-- Phoenix Branch (Sign Language), Arizona -->
+				<li class="mix unit branch na-southwest option04">
+					<div>
+						<img src="https://www.lds.org/ws/maps/v1.0/services/rest/resource/photo?coordinates=-112.13456930000001%2C33.5924357&size=200%2C100&pitch=10&zoom=120&client=mapsClient&token=Ez6IqpDGiVeBq903dbGu_AbpWho%3D" alt="">
+						<h2>Rio Grande Valley Branch (Sign Language)</h2>
+						<h3>McAllen Texas West Stake</h3>
+						<p><a href="https://www.churchofjesuschrist.org/maps/meetinghouses/@26.256106,-98.246583,18&id=ward.deaf:2132109">5601 North 29th Street, McAllen, TX 00000</a></p>
+						<p>10:20 am–1:20 pm (PH/RS/Pri, SS, Sac)</p>
+						<p>Phoenix Temple; Third Saturday, 11:00 am</p>
+						<h5>Membership: 40; 4 missionaries</h5>
+						<h6>Updated 28 Aug 2017</h6>
+					</div>
+				</li>
+				
+				<!--
+				<li class="gap"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+				!-->
+			</ul>
+			<div class="cd-fail-message">No results found; try a different search</div>
+		</section> <!-- cd-gallery -->
+
+		<div class="cd-filter">
+			<form>
+				<!--
+				<div class="cd-filter-block">
+					<h4>Search</h4>
+					<div class="cd-filter-content">
+						<input type="search" placeholder="Try ward...">
+					</div>
+				</div>
+				!-->
+
+				<div class="cd-filter-block">
+					<h4>Check boxes</h4>
+					<ul class="cd-filter-content cd-filters list">
+						<li class="hide">
+							<input class="filter" data-filter=".africa-southeast" type="checkbox" id="checkbox01">
+			    			<label class="checkbox-label" for="checkbox01">Africa Southeast</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".africa-west" type="checkbox" id="checkbox02">
+							<label class="checkbox-label" for="checkbox02">Africa West</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".asia" type="checkbox" id="checkbox03">
+							<label class="checkbox-label" for="checkbox03">Asia</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".asia-north" type="checkbox" id="checkbox04">
+							<label class="checkbox-label" for="checkbox04">Asia North</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".brazil" type="checkbox" id="checkbox05">
+							<label class="checkbox-label" for="checkbox05">Brazil</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".caribbean" type="checkbox" id="checkbox06">
+							<label class="checkbox-label" for="checkbox06">Caribbean</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".central-america" type="checkbox" id="checkbox07">
+							<label class="checkbox-label" for="checkbox07">Central America</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".europe" type="checkbox" id="checkbox08">
+							<label class="checkbox-label" for="checkbox08">Europe</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".europe-east" type="checkbox" id="checkbox09">
+							<label class="checkbox-label" for="checkbox09">Europe East</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".mexico" type="checkbox" id="checkbox10">
+							<label class="checkbox-label" for="checkbox10">Mexico</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".middle-east-africa-north" type="checkbox" id="checkbox11">
+							<label class="checkbox-label" for="checkbox11">Middle East/Africa North</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-northwest" type="checkbox" id="checkbox12">
+							<label class="checkbox-label" for="checkbox12"><abbr title="North America">NA</abbr> Northwest <small>(AK, BC, OR, WA, YK)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-west" type="checkbox" id="checkbox13">
+							<label class="checkbox-label" for="checkbox13"><abbr title="North America">NA</abbr> West <small>(CA, HI)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-southwest" type="checkbox" id="checkbox14">
+							<label class="checkbox-label" for="checkbox14"><abbr title="North America">NA</abbr> Southwest <small>(AZ, NV, NM, OK, TX)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".idaho" type="checkbox" id="checkbox15">
+							<label class="checkbox-label" for="checkbox15"><abbr title="North America">NA</abbr> Idaho</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".utah" type="checkbox" id="checkbox16">
+							<label class="checkbox-label" for="checkbox16"><abbr title="North America">NA</abbr> Utah</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-northeast" type="checkbox" id="checkbox17">
+							<label class="checkbox-label" for="checkbox17"><abbr title="North America">NA</abbr> Northeast <small>(MA, IN, NY, PA, DC, OH)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-southeast" type="checkbox" id="checkbox18">
+							<label class="checkbox-label" for="checkbox18"><abbr title="North America">NA</abbr> Southeast <small>(AR, FL, GA, KY, NC, TN)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".pacific" type="checkbox" id="checkbox19">
+							<label class="checkbox-label" for="checkbox19">Pacific</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".philippines" type="checkbox" id="checkbox20">
+							<label class="checkbox-label" for="checkbox20">Philippines</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".sa-northwest" type="checkbox" id="checkbox21">
+							<label class="checkbox-label" for="checkbox21"><abbr title="South America">SA</abbr> Northwest</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".sa-south" type="checkbox" id="checkbox22">
+							<label class="checkbox-label" for="checkbox22"><abbr title="South America">SA</abbr> South</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Select</h4>
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Choose an option</option>
+								<option value=".option01">Option 1</option>
+								<option value=".option02">Option 2</option>
+								<option value=".option03">Option 3</option>
+								<option value=".option04">Option 4</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<!--
+				<div class="cd-filter-block">
+					<h4>Radio buttons</h4>
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio01" checked>
+							<label class="radio-label" for="radio01">All</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".radio02" type="radio" name="radioButton" id="radio02">
+							<label class="radio-label" for="radio02">Choice 2</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".radio03" type="radio" name="radioButton" id="radio03">
+							<label class="radio-label" for="radio03">Choice 3</label>
+						</li>
+					</ul>
+				</div>
+				!-->
+
+			</form>
+
+			<a href="#0" class="cd-close">&#10005; Close</a>
+		</div> <!-- cd-filter -->
+
+		<a href="#0" class="cd-filter-trigger">Geography filters</a>
+
+	</main> <!-- cd-main-content -->
 
 	<script src="js/jquery-2.1.1.js"></script>
 	<script src="js/jquery.mixitup.min.js"></script>
