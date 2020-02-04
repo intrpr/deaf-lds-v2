@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modqqernizr.js"></script> <!-- Modernizr -->
+	
+	<title></title>
+	<style>
+		.cd-gallery li { background: white; padding: 2em; box-shadow: 0 1em 1em rgba(0,0,0,.08); }
+			.cd-gallery li:hover { transform: translate(0,-1em); transition-duration: 500ms; transition-timing-function: ease-out; transition-delay: 0s !important; }
+			.cd-gallery li h2 { }
+		.cd-gallery li img { width: 100%; margin: 0 0 1em 0; height: 150px; background-size: cover; background-origin: border-box; background-position: center center; background: center center cover border-box; }
+		.ward { border-top: 1em solid #ffcc00; }
+		.branch { border-top: 1em solid #ff6666; }
+		.group { border-top: 1em solid #cc0066; }
+		.mission { border-top: 1em solid #66cccc; }
+		.discontinued { border-top: 1em solid #aaaaaa; opacity: .3; box-shadow: 0 0 0 rgba(0,0,0,0); }
+		.intro { background: rgba(51,29,53,1); color: rgba(255,255,255,1); padding: 3vh; }
+		.hide { display: none; visibility: hidden; }
+
+		html { font-size: 62.5%; }
+		.cd-filter { width: 20%; }
+		.cd-filter form { padding: 70px 20px; }
+		.cd-filter .cd-close { width: 80px; }
+		.cd-header { position: relative; he11ight: 150px; background-color: #331d35; }
+		.cd-header h1 { color: #ffffff; line11-height: 150px; text-align: center; font-size: 2.4rem; }
+
+		@media only screen and (min-width: 1170px) {
+			.cd-filter { width: 20%; }
+			.cd-filter form { padding: 70px 10%; }
+			.cd-header { height: 180px; }
+			.cd-header h1 { line-height: 180px; }
+		}
+
+	</style>
+</head>
+<body>
+	<header class="cd-header">
+		<h1>Content Filters</h1>
+	</header>
+
+	<main class="cd-main-content">
+		<div class="cd-tab-filter-wrapper">
+			<div class="cd-tab-filter">
+				<ul class="cd-filters">
+					<li class="placeholder"> 
+						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
+					</li> 
+					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
+					<li class="filter" data-filter=".ward"><a href="#0" data-type="ward">Wards</a></li>
+					<li class="filter" data-filter=".branch"><a href="#0" data-type="branch">Branches</a></li>
+					<li class="filter" data-filter=".group"><a href="#0" data-type="group">Groups</a></li>
+					<li class="filter" data-filter=".mission"><a href="#0" data-type="mission">Missions</a></li>
+					<li class="filter" data-filter=".discontinued"><a href="#0" data-type="discontinued">Discontinued</a></li>
+				</ul> <!-- cd-filters -->
+			</div> <!-- cd-tab-filter -->
+		</div> <!-- cd-tab-filter-wrapper -->
+
+		<section class="cd-gallery">
+			<ul>
+				<li class="mix intro">
+
+				</li>
+				<li class="mix group">
+					<img src="https://i.ytimg.com/vi/uhYjtEbdiz0/maxresdefault.jpg">
+					<h2>Line1</h2>
+					<p>Line2</p>
+					<p><a href="">Line3</a></p>
+					<p>Line4</p>
+					<p>Line5</p>
+					<p>Line6</p>
+					<p>Updated 1 January 2020</p>
+				</li>
+				<li class="mix branch discontinued">
+					<img src="http://bookzone.boyslife.org/files/2015/07/life_in_space.jpg">
+					<h2>Line1</h2>
+					<p>Line2</p>
+					<p><a href="">Line3</a></p>
+					<p>Line4</p>
+					<p>Line5</p>
+					<p>Line6</p>
+					<p>Updated 1 January 2020</p>
+				</li>
+				<li class="mix ward">
+
+				</li>
+				<li class="mix group">
+
+				</li>
+				<li class="mix mission">
+
+				</li>
+				<li class="mix branch">
+
+				</li>
+				<li class="mix ward">
+
+				</li>
+				<li class="mix branch">
+
+				</li>
+				<li class="mix group">
+
+				</li>
+				<li class="mix ward">
+
+				</li>
+				<li class="mix branch">
+
+				</li>
+				<li class="mix ward">
+
+				</li>
+				<li class="mix branch">
+
+				</li>
+				<li class="mix ward">
+
+				</li>
+				<li class="mix group">
+
+				</li>
+				<li class="mix mission">
+
+				</li>
+				<li class="mix branch">
+
+				</li>
+				<li class="mix mission">
+
+				</li>
+				<li class="mix ward">
+
+				</li>
+				<li class="mix branch">
+
+				</li>
+				<li class="mix group">
+
+				</li>
+				<li class="mix ward">
+
+				</li>
+				<li class="mix mission">
+
+				</li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+			</ul>
+			<div class="cd-fail-message">There aren’t any records for units or groups in that area. Do you know about any? Let us know.</div>
+		</section> <!-- cd-gallery -->
+
+		<div class="cd-filter">
+			<form>
+				<div class="cd-filter-block">
+					<!--
+					<h4>Check boxes</h4>
+					!-->
+					<ul class="cd-filter-content cd-filters list">
+						<li class="hide">
+							<input class="filter" data-filter=".africa-southeast" type="checkbox" id="checkbox01">
+			    			<label class="checkbox-label" for="checkbox01">Africa Southeast</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".africa-west" type="checkbox" id="checkbox02">
+							<label class="checkbox-label" for="checkbox02">Africa West</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".asia" type="checkbox" id="checkbox03">
+							<label class="checkbox-label" for="checkbox03">Asia</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".asia-north" type="checkbox" id="checkbox04">
+							<label class="checkbox-label" for="checkbox04">Asia North</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".brazil" type="checkbox" id="checkbox05">
+							<label class="checkbox-label" for="checkbox05">Brazil</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".caribbean" type="checkbox" id="checkbox06">
+							<label class="checkbox-label" for="checkbox06">Caribbean</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".central-america" type="checkbox" id="checkbox07">
+							<label class="checkbox-label" for="checkbox07">Central America</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".europe" type="checkbox" id="checkbox08">
+							<label class="checkbox-label" for="checkbox08">Europe</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".europe-east" type="checkbox" id="checkbox09">
+							<label class="checkbox-label" for="checkbox09">Europe East</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".mexico" type="checkbox" id="checkbox10">
+							<label class="checkbox-label" for="checkbox10">Mexico</label>
+						</li>
+						<li class="hide">
+							<input class="filter" data-filter=".middle-east-africa-north" type="checkbox" id="checkbox11">
+							<label class="checkbox-label" for="checkbox11">Middle East/Africa North</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-northwest" type="checkbox" id="checkbox12">
+							<label class="checkbox-label" for="checkbox12"><abbr title="North America">NA</abbr> Northwest <small>(AK, BC, OR, WA, YK)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-west" type="checkbox" id="checkbox13">
+							<label class="checkbox-label" for="checkbox13"><abbr title="North America">NA</abbr> West <small>(CA, HI)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-southwest" type="checkbox" id="checkbox14">
+							<label class="checkbox-label" for="checkbox14"><abbr title="North America">NA</abbr> Southwest <small>(AZ, NV, NM, OK, TX)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".idaho" type="checkbox" id="checkbox15">
+							<label class="checkbox-label" for="checkbox15"><abbr title="North America">NA</abbr> Idaho</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".utah" type="checkbox" id="checkbox16">
+							<label class="checkbox-label" for="checkbox16"><abbr title="North America">NA</abbr> Utah</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-northeast" type="checkbox" id="checkbox17">
+							<label class="checkbox-label" for="checkbox17"><abbr title="North America">NA</abbr> Northeast <small>(MA, IN, NY, PA, DC, OH)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".na-southeast" type="checkbox" id="checkbox18">
+							<label class="checkbox-label" for="checkbox18"><abbr title="North America">NA</abbr> Southeast <small>(AR, FL, GA, KY, NC, TN)</small></label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".pacific" type="checkbox" id="checkbox19">
+							<label class="checkbox-label" for="checkbox19">Pacific</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".philippines" type="checkbox" id="checkbox20">
+							<label class="checkbox-label" for="checkbox20">Philippines</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".sa-northwest" type="checkbox" id="checkbox21">
+							<label class="checkbox-label" for="checkbox21"><abbr title="South America">SA</abbr> Northwest</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".sa-south" type="checkbox" id="checkbox22">
+							<label class="checkbox-label" for="checkbox22"><abbr title="South America">SA</abbr> South</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Search</h4>
+					<div class="cd-filter-content">
+						<input type="search" placeholder="Try “branch”...">
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+			</form>
+
+			<a href="#0" class="cd-close">&#x2715; Close</a>
+		</div> <!-- cd-filter -->
+
+		<a href="#0" class="cd-filter-trigger">Search by area...</a>
+	</main> <!-- cd-main-content -->
+
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</body>
+</html>
